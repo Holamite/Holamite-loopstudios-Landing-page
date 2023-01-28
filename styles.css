@@ -285,12 +285,12 @@ html {
 
 .gallery-text {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     color: #fff;
     text-align: center;
-    margin-top: -6.2rem;
+    padding-top: 15.8rem;
 }
 
 .creation-gallery {
