@@ -1,0 +1,413 @@
+/* 
+    ---01 TYPOGRAPHY
+
+    - FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    - FONT-WEIGHS
+    DEFAULTS: 400
+
+    - LINE-HEIGHT
+    DEFAULTS: 1
+
+    --- 02 COLORS
+
+    -Main: #e03131
+    -Tints: #f9d6d6 #fcebeb
+    -Shades:
+    -Greys: #444
+
+    --- 03 SHADOWS
+    --- 04 BORDER-RADUIS
+    --- 05 WHITESPACING
+
+    - SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    color: #444;
+    overflow-x: hidden;
+}
+
+html {
+    /* scroll-behavior: smooth; */
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/*****************************/
+/* REUSEABLE GRID */
+/*****************************/
+
+.grid {
+    display: grid;
+    gap: 6.4rem;
+}
+
+.grid-align {
+    align-items: center;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*****************************/
+/* GENERAL STYLES */
+/*****************************/
+
+.container {
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    max-width: 120rem;
+}
+
+.primary-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 5.2rem;
+    color: #fff;
+}
+
+.secondary-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 4.8rem;
+    color: #444;
+}
+
+/*****************************/
+/* HERO SECTION */
+/*****************************/
+
+.hero {
+    background-image: url("images/desktop/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.section-hero {
+    padding: 5.2rem 0;
+}
+
+.hero-text {
+    border: 1px solid #fff;
+    padding: 3.2rem;
+}
+
+
+/*****************************/
+/* NAVIGATION SECTION */
+/*****************************/
+
+.nav-loop-head {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.4rem;
+    position: relative;
+}
+
+.loop-list {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    list-style: none;
+}
+
+.loop-list-item {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+.loop-list-item:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/*****************************/
+/* NAVIGATION SECTION */
+/*****************************/
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.nav-list-item {
+    text-decoration: none;
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.nav-btn:link,
+.nav-btn:visited {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    background-color: #ca2c2c;
+    border-radius: 1.0rem;
+    color: #fff;
+}
+
+.nav-btn:hover,
+.nav-btn:active {
+    background-color: #a22323;
+
+}
+
+/***********************/
+/* CODE FOR BUILDING A REPONSIVE MOBILE NAVIGATION */
+/***********************/
+
+.btn-nav {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.icon-moblie-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #fff;
+}
+
+.close-icon {
+    display: none;
+}
+
+/***********************/
+/* Sticky Navigation */
+/***********************/
+.sticky {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 99;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+/*****************************/
+/* INTERACTIVE SECTION */
+/*****************************/
+.section-inter {
+    padding: 9.6rem 0;
+}
+
+
+.interactive {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+}
+
+.inter-img {
+    background-image: url("images/desktop/image-interactive.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.inter-box {
+    margin-top: 12.8rem;
+    margin-left: -9.6rem;
+    padding: 6.2rem;
+    padding-bottom: 0;
+    background-color: #fff;
+}
+
+.inter-txt {
+    margin-top: 2.4rem;
+    font-size: 1.8rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/*****************************/
+/* CREATION SECTION */
+/*****************************/
+.section-creation {
+    padding: 9.6rem 0;
+}
+
+.creation-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4.8rem;
+}
+
+.btn-link:link,
+.btn-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid #333;
+}
+
+.btn-link:hover,
+.btn-link:active {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.gallery-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+    margin-top: -6.2rem;
+}
+
+.creation-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.gallery {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 40rem;
+    cursor: pointer;
+}
+
+.gallery:hover {
+    filter: brightness(1);
+    opacity: 40%;
+}
+
+.gallery-1 {
+    background-image: url("images/desktop/image-deep-earth.jpg");
+}
+
+.gallery-2 {
+    background-image: url("images/desktop/image-night-arcade.jpg");
+}
+
+.gallery-3 {
+    background-image: url("images/desktop/image-soccer-team.jpg");
+}
+
+.gallery-4 {
+    background-image: url("images/desktop/image-grid.jpg");
+}
+
+.gallery-5 {
+    background-image: url("images/desktop/image-from-above.jpg");
+}
+
+.gallery-6 {
+    background-image: url("images/desktop/image-pocket-borealis.jpg");
+}
+
+.gallery-7 {
+    background-image: url("images/desktop/image-curiosity.jpg");
+}
+
+.gallery-8 {
+    background-image: url("images/desktop/image-fisheye.jpg");
+}
+
+/*****************************/
+/* FOOTER SECTION */
+/*****************************/
+
+.footer-section {
+    padding: 2.4rem 0;
+    background-color: #000;
+}
+
+.loop-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loop-list-footer {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    margin-top: 2.4rem;
+}
+
+.loop-list-item-footer {
+    list-style: none;
+}
+
+.loop-list-item-footer a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+.loop-list-item-footer a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
+.social {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-icon:hover {
+    padding-bottom: 3px;
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+}
+
+.social-icon {
+    margin-bottom: 2.4rem;
+}
+
+.footer-text {
+    font-size: 1.8rem;
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 3.2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
